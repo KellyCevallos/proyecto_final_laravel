@@ -24,7 +24,7 @@ services:
              apache2-foreground"
 
   db:
-    image: postgres:13
+    image: postgres:16
     container_name: postgres_db
     environment:
       POSTGRES_DB: laravel
