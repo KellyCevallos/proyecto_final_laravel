@@ -31,7 +31,7 @@ const router = createRouter({
         { path: '/docentes', name: 'Docentes', component: Docentes, meta: { requiresAuth: true, role: 'admin' } },
         { path: '/categorias', name: 'Categorias', component: Categorias, meta: { requiresAuth: true, role: 'admin' } },
         { path: '/usuarios', name: 'Usuarios', component: Usuarios, meta: { requiresAuth: true, role: 'admin' } },
-        { path: '/perfil', name: 'Perfil', component: Perfil, meta: { requiresAuth: true, role: ['admin', 'teacher', 'student'] } },
+        { path: '/perfil', name: 'Perfil', component: Perfil, meta: { requiresAuth: true, role: ['teacher', 'student'] } },
         { path: '/homead', name: 'homead', component: Homead, meta: { requiresAuth: true, role: ['admin', 'teacher'] } },
         { path: '/homees', name: 'homeEs', component: HomeEs, meta: { requiresAuth: true, role: ['student'] } },
         { path: '/transacciones', name: 'Transacciones', component: Transacciones, meta: { requiresAuth: true, role: ['admin'] } },
@@ -55,6 +55,7 @@ router.beforeEach(async (to, from, next) => {
     await sesionStore.getSesion();
     const userRole = sesionStore.rol;
     const isAuthenticated = !!userRole;
+    console.log(userRole);
 
     // Redirigir según el rol y la ruta
     if (to.name === 'Home') {
