@@ -44,6 +44,7 @@ const goToRegister = () => {
 </script>
 
 <template>
+  <Header></Header>
   <div class="login-container">
     <div class="login-box animate-fade-in">
       <h2>Inicia sesión en tu cuenta</h2>

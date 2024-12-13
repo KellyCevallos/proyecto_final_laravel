@@ -45,14 +45,12 @@ const loadCursos = async (pageUrl = null) => {
 const openCreateModal = () => {
   cursoSeleccionado.value = null;  // Limpiar el curso seleccionado
   showCrearCurso.value = true;
-  loadCursos();
 };
 
 // Función para abrir el modal en modo de edición
 const openEditModal = (curso) => {
   cursoSeleccionado.value = curso;  // Cargar los datos del curso seleccionado
   showCrearCurso.value = true;
-  loadCursos();
 };
 
 // Función para abrir el modal de estudiantes

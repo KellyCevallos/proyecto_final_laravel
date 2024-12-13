@@ -14,7 +14,7 @@ const pagoStore = Pago();
 const transaccionStore = Transacciones();
 const sweetAlert = sweetalert();
 const swal = Swal;
-const url = 'http://10.42.2.67:8080';
+const url = 'http://127.0.0.1:8000';
 
 
 const selectedView = ref('misCursos'); // Controla la vista seleccionada

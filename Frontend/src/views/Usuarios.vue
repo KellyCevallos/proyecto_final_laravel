@@ -310,7 +310,7 @@ onMounted(() => {
                 <button class="btn btn-warning btn-sm mx-1" @click="openEditModal(estudiante)">
                   <i class="bi bi-pencil"></i> Editar
                 </button>
-                <button class="btn btn-danger btn-sm mx-1" @click="deleteDocente(estudiante.userId)">
+                <button class="btn btn-danger btn-sm mx-1" @click="deleteEstudiante(estudiante.userId)">
                   <i class="bi bi-trash"></i> Eliminar
                 </button>
               </td>

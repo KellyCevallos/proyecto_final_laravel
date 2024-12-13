@@ -65,7 +65,7 @@ const goToLogin = () => {
 </script>
 
 <template>
-
+  <Header></Header>
   <div class="register-container">
     <div class="register-left animate-slide-in-left">
       <h1>¡Únete a nuestra comunidad!</h1>

@@ -83,7 +83,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
 Route::middleware(['auth:sanctum', 'role:student'])->group(function () {
     Route::post('/inscripcion', [ClaseController::class, 'inscripcion']); // Inscribirse a un curso
     Route::get('/getRelacion', [ClaseController::class,'index']);
+
     Route::post('/postExamen/{id}', [CursoController::class, 'Examen']); // Inscribirse a un curso
+
 });
-
-
