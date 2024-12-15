@@ -67,8 +67,6 @@ RUN composer update
 
 RUN composer dump-autoload
 
-RUN php artisan config:clear && php artisan cache:clear
-
 
 RUN php artisan migrate --force
 
