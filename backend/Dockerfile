@@ -68,13 +68,10 @@ RUN composer update
 RUN composer dump-autoload
 
 
-RUN php artisan migrate --force
-
-
 # Exponer los puertos necesarios
 EXPOSE 80
 
 
 # Comando de inicio
-CMD ["sh", "-c", "service nginx start && php-fpm"]
+CMD ["sh", "-c", "service nginx start && php-fpm && php artisan migrate:fresh --force"]
 
