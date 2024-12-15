@@ -1,0 +1,42 @@
+services:
+  - type: web
+    name: proyecto_final
+    env: docker
+    plan: free
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    buildCommand: ""
+    envVars:
+      - key: PORT
+        value: 80
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: true
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        fromDatabase:
+          name: db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: db
+          property: port
+      - key: DB_DATABASE
+        fromDatabase:
+          name: db
+          property: database
+      - key: DB_USERNAME
+        fromDatabase:
+          name: db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: db
+          property: password
+
+
+databases:
+  - name: db
+    plan: free
