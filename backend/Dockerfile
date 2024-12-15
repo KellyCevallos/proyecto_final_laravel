@@ -69,8 +69,6 @@ RUN composer dump-autoload
 
 RUN php artisan migrate
 
-# Limpiar la imagen
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Exponer los puertos necesarios
 EXPOSE 80
