@@ -67,7 +67,7 @@ RUN composer update
 
 RUN composer dump-autoload
 
-RUN php artisan migrate
+RUN php artisan migrate --force
 
 
 # Exponer los puertos necesarios
