@@ -73,5 +73,5 @@ EXPOSE 80
 
 
 # Comando de inicio
-CMD ["sh", "-c", "service nginx start && php-fpm && php artisan migrate:fresh --force"]
+CMD ["sh", "-c", "php artisan migrate:fresh --force && service nginx start && php-fpm"]
 
